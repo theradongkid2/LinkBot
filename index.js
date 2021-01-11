@@ -84,36 +84,12 @@ client.on("message", async message => {
         
       }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //moderation commands
-    
     if(command === "say") {
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{}); 
         message.channel.send(`${sayMessage}`);
     
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     if(command === "ping") {
         const m = await message.channel.send("Ping!");
