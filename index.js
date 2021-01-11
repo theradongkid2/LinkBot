@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const token = proccess.env.token;
+const token = process.env.token;
 const sbID = "";
 const sgID = "";
 const ruseID = "";
