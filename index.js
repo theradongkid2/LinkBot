@@ -75,7 +75,7 @@ client.on("message", async message => {
             
             timestamp: new Date(),
             footer: {
-                text: 'Link by Joshua Koh',
+                text: 'LinkBot by Joshua Koh',
                 icon_url: 'https://cdn.discordapp.com/avatars/730004103719288904/ce269b42ef41f924bdeb4e3de9d0cb26.png?size=2048',
             },
         };
@@ -88,7 +88,6 @@ client.on("message", async message => {
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{}); 
         message.channel.send(`${sayMessage}`);
-    
     }
     
     if(command === "ping") {
