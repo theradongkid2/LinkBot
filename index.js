@@ -4,8 +4,8 @@ const config = require("./config.json");
 const token = process.env.token;
 //const sbID = "";
 //const sgID = "";
-const ruseID = "";
-const chsID = "";
+const ruseID = "798382906463485972";
+const chsID = "798382077782786109";
 
 //Error Handler
 process.on('unhandledRejection', error => {
