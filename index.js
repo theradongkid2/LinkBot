@@ -3,9 +3,9 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const token = process.env.token;
 //const sbID = "";
-//const sgID = "";
-const ruseID = "798382906463485972";
-const chsID = "798382077782786109";
+const sgID = "803195678595481631";
+const ruseID = "803191990778724352";
+const chsID = "";
 
 //Error Handler
 process.on('unhandledRejection', error => {
@@ -38,8 +38,8 @@ client.on('message', message => {
   if(message.channel.id === ruseID){
       var messageContent = message.content;
       //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
-      //client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
-      client.channels.get(chsID).send(`${nickname}: ${messageContent}`);
+      client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
+      client.channels.get(chsID).send(`${nickname} (JRAHS): ${messageContent}`);
   }/* else if(message.channel.id === sbID){
     var messageContent = message.content;
     client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
@@ -47,15 +47,15 @@ client.on('message', message => {
     client.channels.get(ruseID).send(`${nickname} (JRAHS): ${messageContent}`);
   } */else if(message.channel.id === chsID){
     var messageContent = message.content;
-    //client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
+    client.channels.get(sgID).send(`${nickname} (SB): ${messageContent}`);
     //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
-    client.channels.get(ruseID).send(`${nickname}: ${messageContent}`);
-  }/* else if(message.channel.id === sgID){
+    client.channels.get(ruseID).send(`${nickname} (SB): ${messageContent}`);
+  }else if(message.channel.id === sgID){
     var messageContent = message.content;
-    client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
-    client.channels.get(chsID).send(`${nickname} (JRAHS): ${messageContent}`);
-    client.channels.get(ruseID).send(`${nickname} (JRAHS): ${messageContent}`);
-  }*/
+    //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
+    client.channels.get(chsID).send(`${nickname} (SG): ${messageContent}`);
+    client.channels.get(ruseID).send(`${nickname} (SG): ${messageContent}`);
+  }
 });
 
 client.on("message", async message => {
