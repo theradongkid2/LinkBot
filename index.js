@@ -39,21 +39,22 @@ client.on('message', message => {
       var messageContent = message.content;
       //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
       client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
-      client.channels.get(chsID).send(`${nickname} (JRAHS): ${messageContent}`);
+      //client.channels.get(chsID).send(`${nickname} (JRAHS): ${messageContent}`);
   }/* else if(message.channel.id === sbID){
     var messageContent = message.content;
     client.channels.get(sgID).send(`${nickname} (JRAHS): ${messageContent}`);
     client.channels.get(chsID).send(`${nickname} (JRAHS): ${messageContent}`);
     client.channels.get(ruseID).send(`${nickname} (JRAHS): ${messageContent}`);
-  } */else if(message.channel.id === chsID){
-    var messageContent = message.content;
-    client.channels.get(sgID).send(`${nickname} (SB): ${messageContent}`);
+  } *///else if(message.channel.id === chsID){
+    //var messageContent = message.content;
+    //client.channels.get(sgID).send(`${nickname} (SB): ${messageContent}`);
     //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
-    client.channels.get(ruseID).send(`${nickname} (SB): ${messageContent}`);
-  }else if(message.channel.id === sgID){
+   // client.channels.get(ruseID).send(`${nickname} (SB): ${messageContent}`);
+  //}
+  else if(message.channel.id === sgID){
     var messageContent = message.content;
     //client.channels.get(sbID).send(`${nickname} (JRAHS): ${messageContent}`);
-    client.channels.get(chsID).send(`${nickname} (SG): ${messageContent}`);
+    //client.channels.get(chsID).send(`${nickname} (SG): ${messageContent}`);
     client.channels.get(ruseID).send(`${nickname} (SG): ${messageContent}`);
   }
 });
